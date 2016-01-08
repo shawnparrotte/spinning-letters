@@ -91,9 +91,11 @@ function finallyFlipMe(){
 }
 
 function launchFlipper(){
-  wordChopper($("#flip-this").val(), true);
-  finallyFlipMe();
-  $("#flip-this").val("");
+  if($("#flip-this").val() !== ""){
+    wordChopper($("#flip-this").val(), true);
+    finallyFlipMe();
+    $("#flip-this").val("");
+  }
 }
 
 
