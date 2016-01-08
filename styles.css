@@ -1,0 +1,62 @@
+.letter-rotate-out {
+  display: inline-block;
+  -webkit-animation-name: rotateOut;
+  -webkit-animation-duration: .05s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in;
+}
+
+.letter-rotate-in {
+  display: inline-block;
+  -webkit-animation-name: rotateIn;
+  -webkit-animation-duration: .05s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in;
+}
+
+#flip-me-in span {
+  transform: rotateX(90deg);
+}
+
+#flip-container {
+  display: flex;
+  justify-content: center;
+}
+
+#flipper {
+  text-align: center;
+}
+
+#flipper h1 {
+  font-family: Arial;
+  font-size: 50px;
+}
+
+#text-outer-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#flip-this {
+  font-size: 25px;
+  font-family: Arial;
+}
+
+#button {
+  font-family: Arial;
+  font-size: 25px;
+}
+
+@-webkit-keyframes rotateOut {
+  0%   {transform: rotateX(0deg); top: 150px;}
+/* 25%  {transform: rotateX(60deg) translateY(20px);}
+ 50%  {transform: rotateX(90deg) translateY(40px);} */
+100% {transform: rotateX(-90deg); top: 170px;}
+}
+
+@-webkit-keyframes rotateIn {
+  0%   {transform: rotateX(90deg); top: 130px;}
+/* 25%  {transform: rotateX(60deg) translateY(20px);}
+ 50%  {transform: rotateX(90deg) translateY(40px);} */
+100% {transform: rotateX(0deg); top: 150px;}
+}
